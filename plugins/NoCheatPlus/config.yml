@@ -42,10 +42,7 @@ protection:
       active: true
       nopermission:
         message: '&4You do not have permission to perform this command.'
-        commands:
-        - plugins
-        - version
-        - icanhasbukkit
+        commands: []
       unknowncommand:
         message: Invalid command. Did you spell it right?
         commands: []
@@ -110,7 +107,7 @@ checks:
       active: true
       actions: cancel
     autosign:
-      active: true
+      active: false
       skipempty: false
       actions: cancel vl>10 log:bautosign:0:3:if cancel
     direction:
@@ -473,6 +470,8 @@ checks:
     assumesprint: true
     speedgrace: 4.0
     enforcelocation: default
+    setback:
+      method: default
     vehicle:
       preventdestroyown: true
       enforcelocation: default
@@ -546,6 +545,7 @@ strings:
   fdirection: '[player] failed [check]: tried to hit an entity out of line of sight. VL [violations].'
   flyshort: '[player] failed [check]: tried to move unexpectedly. VL [violations].'
   flylong: '[player] failed [check]: tried to move from [locationfrom] to [locationto] over a distance of [distance] block(s). VL [violations].'
+  flyfile: '[player] failed [check]: tried to move: [locationfrom] -> [locationto], d=[distance] ([tags]). VL [violations].'
   freach: '[player] failed [check]: tried to attack entity out of reach. VL [violations].'
   fselfhit: '[player] failed [check]: tried to self-hit. VL [violations].'
   fspeed: '[player] failed [check]: tried to attack with too high a frequency. VL [violations].'
